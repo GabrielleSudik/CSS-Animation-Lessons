@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #262626;
+    font-family: arial;
+}
+
+.loader1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader1 h1{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 9em;
+    color: rgba(255, 255, 255, .1);
+    background-image: url(image1.jpg);
+    background-repeat: repeat-x;
+   -webkit-background-clip: text;
+   animation: animateWater 15s linear infinite;
+}
+
+@keyframes animateWater{
+    0%{
+        background-position: left 0px top 140px;
+    }
+    40%{
+        background-position: left 800px top -50px;
+    }
+    80%{
+        background-position: left 1800px top -50px;
+    }
+    100%{
+        background-position: left 2400px top 140px;
+    }
+}
+
+/* need to get some water and call it image1
+and drop it into the folder*/
+
+.banner{
+    height: 100vh;
+}
+
+.banner:before{
+    content: '';
+    height: 20vh;
+    width: 100vw;
+    position: absolute;
+    top:200px;
+    left:0;
+    background: url(confetti.png);
+    animation: animateConfetti 15s linear infinite;
+}
+
+@keyframes animateConfetti{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 1080px;
+    }
+}
+
+.center1{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pulse{
+    width: 100px;
+    height: 100px;
+    background: #ff6d4a;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-family: verdana;
+    text-transform: uppercase;
+    animation: animatePulse 3s linear infinite;
+}
+
+@keyframes animatePulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,.7), 
+        0 0 0 0 rgba(55,109,74,.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0), 
+        0 0 0 0 rgba(55, 109, 74, 0.7);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0), 
+        0 0 0 30px rgba(55,109,74,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0), 
+        0 0 0 30px rgba(55,109,74,0);
+    }
+}
+
+.floater{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #93beff;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.floater h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: arial;
+    font-size: 4em;
+    line-height: 1em;
+    color: #fff;
+    text-shadow: 0 1px 0 #efefef,
+                 0 2px 0 #efefef,
+                 0 3px 0 #efefef,
+                 0 4px 0 #efefef,
+                 0 10px 4px rgba(0,0,0,.1);
+    animation: animateFloat 5s linear infinite;
+}
+
+@keyframes animateFloat{
+    0%{
+        transform: rotate(5deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
